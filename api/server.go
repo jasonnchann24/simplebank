@@ -5,14 +5,14 @@ import (
 	db "github.com/jasonnchann24/simplebank/db/sqlc"
 )
 
-// Serves HTTP reqs for our banking service
+// Serves HTTP requests for our banking service
 type Server struct {
-	store  *db.Store
+	store  db.Store
 	router *gin.Engine
 }
 
 // Creates a new HTTP server and setup routing
-func NewServer(store *db.Store) *Server {
+func NewServer(store db.Store) *Server {
 	server := &Server{store: store}
 	router := gin.Default()
 
