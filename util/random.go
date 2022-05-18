@@ -30,8 +30,8 @@ func RandomString(n int) string {
 	return sb.String()
 }
 
-// RandomeName generates a random name
-func RandomeName() string {
+// RandomName generates a random name
+func RandomName() string {
 	return RandomString(6)
 }
 
